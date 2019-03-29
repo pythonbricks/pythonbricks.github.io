@@ -39,3 +39,51 @@ respuesta = respuesta.trim()  // Le quitamos los espacios a la repsuesta al prin
 ```
 
 De esta forma, podemos ir construyendo poco a poco la historia. Para empezar, es buena idea preguntarle al jugador cómo se llama, y utilizarlo más adelante. ¡ A ver que se les ocurre!
+
+## 2. El cadáver exquisito
+
+Suena raro, ya lo sé. Les cuento
+
+El [cadáver exquisito]() es una técnica para escribir historias entre varias personas de forma divertida. Para ello, se escribe en un papel las diferentes partes que puede tener una historia, de la siguiente manera:
+```markdown
+1. Qué?
+2. Cuándo?
+3. Cómo?
+4. Dónde?
+6. Para qué?
+```
+
+Una vez escrito esto, cada jugador escribe la pregunta que le toca, la dobla de manera que el siguiente no la pueda ver, y pasa el papel. Así, al final sale una historia que tiene la misma estructura, pero como cada persona no puede saber qué fue lo que escribió la anterior... es una historia sin sentido
+
+En esta actividad vamos a hacer un generador de historias de cadaver exquisito. Para ello, escribiremos una serie de listas que puedan ser (absurdas) respuestas a las preguntas de arriba, y luego usaremos Python para combinarlas de forma aleatoria
+
+Algunas cosillas que nos pueden ser útiles:
+```python
+
+\\ 1. Elegimos un personaje
+comienzo = "El pequeño Timmy "
+\\ 2. Creamos una lista de strings por cada una de las preguntas
+lista_que = ["Se cayó por un barranco", "Fue a comer", "Se enfadó porque"]
+
+\\ Las combinamos
+
+def imprime_historia():
+    print(comienzo + lista_que[2])
+    
+imprime_historia()
+
+// ESTE PROGRAMA IMPRIME LO SIGUIENTE
+"El pequeño Timmy se enfadó porque ..."
+```
+
+Obviamente, si ponemos nosotros los números, ya sabemos que frases van a salir, por lo que la mejor idea en ese caso es imprimir *elementos aleatorios de las listas*, aunque siempre en el mismo orden. Es decir, nos podemos hacer un método que coja una frase de cada una de las listas y las combine. Así, cada vez que ejecutemos el programa tendremos *una historia diferente*
+
+Entre más frases tengan las listas, más posibilidades de historias tendremos
+
+#### Posibles modificaciones
+* Diferentes personajes
+* Añadir más elementos a las historias
+* Permitir al usuario introducir su nombre
+* Permitir que el usuario añada nuevas líneas
+* Cargar las líneas de un fichero de texto
+* Ir guardando las historias generadas como si fuera un resumen
