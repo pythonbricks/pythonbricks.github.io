@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+# Python Bricks
 
-You can use the [editor on GitHub](https://github.com/pythonbricks/pythonbricks.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Consejos inciales
+Estas actividades se pueden realizar [online](https://repl.it/) o con PyCharm, que ya lo tienen instalado en los portátiles. En ambos casos la versión instalada es Python 3
+La idea es que sean capaces de programar ustedes solos. Ánimo!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 1. Aventura de texto
+En este primer ejercicio lo que se busca es ir pillando soltura con Python. Para ello, vamos a hacer una historia o cuento que será como los libros de "Elige tu propia aventura", es decir, contaremos una historia y le haremos preguntas al jugador. Dependiendo de la respuesta que nos de, pasará una cosa u otra
 
-### Markdown
+(Sé que no se lo van a leer, pero les dejo [un poquito de historia](https://es.wikipedia.org/wiki/Aventura_conversacional) )
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Para poder hacerle preguntas al usuario necesitamos usar la función `input`. Con `input` podemos recoger un valor que le preguntemos al usuario. Sería algo así:
 
-```markdown
-Syntax highlighted code block
+```python
+name = input("¿Cómo te llamas? ")
+print("Encantado, " + name + "!")
+```
+Gracias a esta función podemos ir preguntándole cosas al usuario e ir guardando lo que nos responde. Así, podemos ir "personalizando" la historia, y dejando que el usuario participe en ella
 
-# Header 1
-## Header 2
-### Header 3
+Es buena idea dejar siempre un `else` cuando hagamos condicionales. De esta forma conseguimos que el programa no se pare aunque el usuario nos introduzca una respuesta que no se nos haya ocurrido, haciendo así que sea más entretenido
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Hemos de tener en cuenta una cosa: En Python, si usamos el comparador `==`, las `string` han de ser exactamente iguales. Es decir, en esta comparación:
+```python
+respuesta = input("¿Como te llamas?")
+if (respuesta == "Javi"):
+    print ("Hola, profe")
+else:
+    print("Oye, tu no eres el profe")
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+En el caso de arriba, si el usuario pone Javi, la respuesta será la frase del `if`, pero si pone Javier, javi o cualquier otra combinación, la respuesta será la del `else`, porque no es exactamente igual. 
 
-### Jekyll Themes
+Esto es difiícil de evitar, pero para ayudarnos a ello, podemos utilizar las siguientes funciones:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pythonbricks/pythonbricks.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```python
+respuesta = respuesta.upper() // Pasamos respuesta a mayúsculas
+respuesta = respuesta.lower() // Pasamos la respuesta a minúsculas
+respuesta = respuesta.trim()  // Le quitamos los espacios a la repsuesta al principio y al final
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+De esta forma, podemos ir construyendo poco a poco la historia. Para empezar, es buena idea preguntarle al jugador cómo se llama, y utilizarlo más adelante. ¡ A ver que se les ocurre!
