@@ -80,10 +80,47 @@ Obviamente, si ponemos nosotros los números, ya sabemos que frases van a salir,
 
 Entre más frases tengan las listas, más posibilidades de historias tendremos
 
-#### Posibles modificaciones
+##### Posibles modificaciones
 * Diferentes personajes
 * Añadir más elementos a las historias
 * Permitir al usuario introducir su nombre
 * Permitir que el usuario añada nuevas líneas
 * Cargar las líneas de un fichero de texto
 * Ir guardando las historias generadas como si fuera un resumen
+
+
+## 3. Calculadora
+
+Una de las primeras actividades que se suele hacer cuando se empieza en un lenguaje nuevo es programar una calculadora. Es decir, vamos a hacer un programa que le pida dos números al usuario, y luego nos permita realizar una operación (Las típicas, suma, resta, multiplicación y división).
+
+En principio vamos a hacer algo sencillo:
+1. Le pedimos al usuario que introduzca un número
+2. Le pedimos un segundo número
+3. Le preguntamos qué operación desea realizar
+
+Y mostramos el resultado, imprimiéndolo en una nueva línea
+
+##### Posibles modificaciones
+* Definir los símbolos de las operaciones
+* Hacer que entienda operaciones en una sola línea, en vez de pedirlo de forma separada (" 3 / 4", por ejemplo")
+* Hacer que pueda hacer más de una operación, guardando el resultado
+
+## 4. Piedra, papel, tijeras
+El clásico juego de toda la vida, pero en versión código. Tendremos que preguntarle al usuario qué escoge, y elegir una de las opciones en nuestro programa de forma aleatoria.
+
+Tendremos que hacer un método, que admita dos parámetros (la jugada del usuario y la de la máquina) y nos diga quien es el ganador. Una vez lo sepamos, debemos mostrar el ganador por pantalla
+
+##### Posibles modificaciones
+* Que las partidas sean al mejor de tres
+* Partidas infinitas por puntos
+* Meter un elemento nuevo en la logica del juego
+* Definir trucos
+* Que el programa se ría de ti cuando pierdas
+
+## 5. Cursos externos:
+Fundación Raspberry:
+https://projects.raspberrypi.org/es-ES/codeclub/python-module-1
+ 
+
+
+
