@@ -117,7 +117,45 @@ Tendremos que hacer un método, que admita dos parámetros (la jugada del usuari
 * Definir trucos
 * Que el programa se ría de ti cuando pierdas
 
-## 5. Cursos externos:
+## 5. Generador de scripts en .bat
+Se acuerdan de cuando estuvimos haciendo scripts en .bat o .vbs? También les enseñé el programa que se "inventaba" nombres de personas, y sacaba unas listas para registros. Pues bien, la idea es hacer un generador de Scripts
+
+##### ¿Cómo?
+Python tiene módulos que nos permiten generar archivos con texto dentro. Si definimos una serie de funciones que hagan las distintas partes que tiene un archivo .bat, podemos construir varios tipos de scripts sin tener que escribirlos a mano
+
+Por ejemplo:
+
+```python
+command = "@echo off";
+def google(command):
+    command += ("\nstart www.google.com")
+   
+    
+def forocoches(command):
+    command +=("\nstart www.forocoches.com")
+    print (command)
+    
+def construye_bat():
+    google(command)
+    forocoches(command)
+    
+    
+construye_bat()
+```
+
+Si en vez de hacer un print lo escribimos a un archivo, podremos después hacer doble click y utilizarlo, siempre que esté bien escrito
+
+
+```python
+#archivo-salida.py
+f = open ('script.bat','w')
+f.write('lo que vaya en el archivo')
+f.close()
+
+```
+NOTA: Hay que abrir el archivo (f = open...) y después cerrarlo (f.close()), porque si no se quedará el archivo abierto y tendremos problemas para usarlo
+
+## 6. Cursos externos:
 Fundación Raspberry:
 https://projects.raspberrypi.org/es-ES/codeclub/python-module-1
  
