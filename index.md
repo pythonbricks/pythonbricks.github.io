@@ -155,10 +155,19 @@ f.close()
 ```
 NOTA: Hay que abrir el archivo (f = open...) y después cerrarlo (f.close()), porque si no se quedará el archivo abierto y tendremos problemas para usarlo
 
-## 6. Cursos externos:
+
+## 6. Guess the number:
+La idea es hacer un programa que nos haga adivinar un número aleatorio, elegido por él. Sería algo así como un "Adivina qué numero pienso".
+El programa elegirá un número al azar, y nos pedirá que digamos un número. A continuación, comparará el número introducido con el que ha escogido, y nos dirá si es mayor o menor, para que podamos adivinarlo.
+
+Ejemplo:
+https://pythonbitsybricks.javiivaj.repl.run/
+
+## 7. Cursos externos:
 Fundación Raspberry:
 https://projects.raspberrypi.org/es-ES/codeclub/python-module-1
  
+
 
 
 
